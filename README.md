@@ -43,11 +43,22 @@ Error in renderToPipeableStream: TypeError: Cannot read properties of null (read
 
 ## Core issue:
 
-See [src/router.tsx](src/router.tsx) for the core issue. The error occurs when calling `routerWithApolloClient(router, apolloClient);`, which sets `router.options.InnerWrap` to a component that uses the `useContext` hook.
+See [src/router.tsx](src/router.tsx) for the core issue. The error occurs when calling
+
+```js
+routerWithApolloClient(router, apolloClient);
+```
+
+which sets `router.options.InnerWrap` to a component that uses the `useContext` hook.
 
 If instead of using the external `@apollo/client-integration-tanstack-start` package, we manually set `router.options.InnerWrap` to literally the same code, it works without error.
 
+```js
+router.options.InnerWrap = ({ children }) =>
+  React.createElement(ApolloProvider, { client: apolloClient }, children);
+```
+
 Source code for the `@apollo/client-integration-tanstack-start` package can be found here:
 
-[index.js](.yalc/@apollo/client-integration-tanstack-start/dist/index.js)
-[package.json](.yalc/@apollo/client-integration-tanstack-start/package.json)
+- [index.js](.yalc/@apollo/client-integration-tanstack-start/dist/index.js)
+- [package.json](.yalc/@apollo/client-integration-tanstack-start/package.json)
