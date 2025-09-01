@@ -1,0 +1,24 @@
+{
+  "name": "@apollo/client-integration-tanstack-start",
+  "version": "0.12.3-alpha.5",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "typings": "./dist/index.d.ts",
+  "author": "packages@apollographql.com",
+  "license": "MIT",
+  "peerDependencies": {
+    "@apollo/client": "^4.0.0",
+    "@tanstack/react-router": "^1.132.0-alpha.8",
+    "@tanstack/react-start": "^1.132.0-alpha.9",
+    "graphql": "^16 || >=17.0.0-alpha.2",
+    "react": "^19",
+    "react-dom": "^19",
+    "rxjs": "^7.3.0"
+  }
+}

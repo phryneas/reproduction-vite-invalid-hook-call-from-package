@@ -1,0 +1,26 @@
+{
+  "version": "v1",
+  "packages": {
+    "@tanstack/start": {
+      "signature": "b19c5a458c544d30d9669bf31ca018ba",
+      "file": true,
+      "replaced": "^1.95.6"
+    },
+    "@tanstack/react-router": {
+      "signature": "0ec0715da2256e25f7a6b21aec8fe7fa",
+      "file": true,
+      "replaced": "^1.95.6"
+    },
+    "@apollo/client-integration-tanstack-start": {
+      "version": "0.12.3-alpha.5",
+      "signature": "732cb03fcce2748daa5edbbb358feacb",
+      "file": true,
+      "replaced": "0.12.3-alpha.5"
+    },
+    "@integration-test/shared": {
+      "version": "0.0.0",
+      "signature": "e9c712f0e26378aad92dc8d7e29cb24b",
+      "file": true
+    }
+  }
+}
